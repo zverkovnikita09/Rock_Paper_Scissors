@@ -171,19 +171,18 @@ for(let i = 0; i<select_img.length; i++){
             animComp.classList.remove('anim');
             pScore.innerText = pCount;
             cScore.innerText = cCount;
-            console.log(forWin);
             if(pCount==forWin-1&&cCount==forWin-1&&forWin>1){
                 forWin +=1;
                 condition.innerText = 'Игра до ' + forWin;
+            }
+            for(let j=0;j<overlays.length;j++){
+                overlays[j].style.display='none';
             }
             if(pCount == forWin||cCount == forWin){
                 for(let j=0;j<overlays.length;j++){
                     overlays[j].style.display='block';
                 }
                 setTimeout(Winner,1000)
-            }
-            for(let j=0;j<overlays.length;j++){
-                overlays[j].style.display='none';
             }
         },1250)
         } 
