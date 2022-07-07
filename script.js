@@ -44,6 +44,9 @@ playerName.oninput = function(){
 
 play.onclick = function(){
     if(playerName.value.length>=3&&playerName.value.length<=15){
+        for(let j=0;j<overlays.length;j++){
+            overlays[j].style.display='none';
+        }
         first_screen.style.display = 'none';
         main_screen.style.display = 'flex';
         properties.style.display = 'none';
