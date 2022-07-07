@@ -177,6 +177,9 @@ for(let i = 0; i<select_img.length; i++){
                 condition.innerText = 'Игра до ' + forWin;
             }
             if(pCount == forWin||cCount == forWin){
+                for(let j=0;j<overlays.length;j++){
+                    overlays[j].style.display='block';
+                }
                 setTimeout(Winner,1000)
             }
             for(let j=0;j<overlays.length;j++){
