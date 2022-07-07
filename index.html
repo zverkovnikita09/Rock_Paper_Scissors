@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>КНБ</title>
+</head>
+<body>
+    <div class="first_screen" id="first_screen">
+        <div class="rules" id="rules" style="display: none;">
+            <p id="closeRules">&#10005</p>
+            Предлагаем Вам сразиться с компьютером в известную всем с детства игру "Камень Ножницы Бумага". <br><br>
+            1. Для старта игры нажмите кнопку "начать". <br><br>
+            В нижней части экрана есть 3 кнопки: <br>
+            — Камень (ладонь сжатая в кулак) <br>
+            — Ножницы (ладонь с указательным и средним пальцами) <br>
+            — Бумага (открытая ладонь) <br><br>
+            2. Кликните на изображение того знака, который хотите выбрать, затем компьютер сделает свой выбор. <br>
+            Победитель определяется по следующим правилам: <br><br>
+            — камень побеждает ножницы <br>
+            — ножницы побеждают бумагу <br>
+            — бумага побеждает камень <br>
+            — ничья, если игрок и компьютер выбрали одинаковый знак <br><br>
+            3. Игра идет до тех пор, пока игрок или компьютер не наберет 1, 3, 5, 7 или 10 очков. В зависимости от выбранного режима игры. В случае равного счета игра идет до преимущества в 2 очка<br><br>
+            Желаем удачи!
+        </div>
+        <div class="buttons" id="buttons" >
+            <button type="button" id="button_start" class="button btn_start">Начать</button>
+            <button type="button" id="btn_rls" class="button btn_rules">Правила</button>
+        </div>
+        <div class="props" id="props" style="display: none;">
+            <label for="name" class="name">
+                <p>Введите никнейм (от 3 до 15 символов)</p>
+                <input type="text" id="name" class="name_input wrong" placeholder="Никнейм" autocomplete="off">
+            </label>
+            <p>Выберите Ваш цвет</p>
+            <div class="colors">
+                <div class="color_item">
+                    <input type="radio" name="color" class="color_radio"checked id="color1" value="0, 0, 255">
+                    <label for="color1" class="color_lbl"></label>
+                </div>
+                <div class="color_item">
+                    <input type="radio" name="color" class="color_radio"id="color2" value="0, 128, 0">
+                    <label for="color2"></label>
+                </div>
+                <div class="color_item">
+                    <input type="radio" name="color"class="color_radio"id="color3" value="128, 0, 128">
+                    <label for="color3"></label>
+                </div>
+                <div class="color_item">
+                    <input type="radio" name="color"class="color_radio"id="color4" value="0, 255, 255">
+                    <label for="color4"></label>
+                </div>
+                <div class="color_item">
+                    <input type="radio" name="color"class="color_radio"id="color5" value="255, 192, 203">
+                    <label for="color5"></label>
+                </div> 
+            </div>
+            <p>Сколько очков для победы</p>
+            <div class="regime">
+                <div class="regime_item">
+                    <input type="radio" name="regime" class="regime_radio" id="regimge1"checked value="1">
+                    <label for="regimge1">1</label>
+                </div>
+                <div class="regime_item">
+                    <input type="radio" name="regime" class="regime_radio" id="regimge2"checked value="3">
+                    <label for="regimge2">3</label>
+                </div>
+                <div class="regime_item">
+                    <input type="radio" name="regime" class="regime_radio" id="regimge3"checked value="5">
+                    <label for="regimge3">5</label>
+                </div>
+                <div class="regime_item">
+                    <input type="radio" name="regime" class="regime_radio" id="regimge4" value="7">
+                    <label for="regimge4">7</label>
+                </div>
+                <div class="regime_item">
+                    <input type="radio" name="regime" class="regime_radio"id="regimge5" value="10">
+                    <label for="regimge5">10</label>
+                </div>
+            </div>
+            <button type="button" class="start" id="start">В игру</button>
+        </div>
+    </div>
+
+    <div class="final_result" id="final_screen" style="display: none;">
+        <h2 id="final_result">Вы победили!</h2>
+        <p>Нажмите на любое место на экране, чтобы выйти</p>
+    </div>
+
+    <div class="main_screen"  id="main_screen" style="display: none;">
+        <h1>Камень! Ножницы! Бумага!</h1>
+        <div class="play_area">
+            <div class="player">
+                <p id="nameOutput">Плейер</p>
+                <div class="player__choice choice" id="playerLayout">
+                    <div class="wrapper" id="animPlayer">
+                        <img src="./rock.svg" alt="" style="transform: scaleX(-1); " id="player__choice">
+                    </div>
+                </div>
+            </div>
+            <div class="score">
+                <h2>Счёт</h2>
+                <p class="result" id="result">Ничья</p>
+                <div class="score__numbers">
+                    <p id="pScore">0</p>
+                    <p>:</p>
+                    <p id="cScore">0</p>
+                </div>
+                <p id="win_conditn"></p>
+            </div>
+            <div class="computer">
+                <p>Компьютер</p>
+                <div class="computer__choice choice" >
+                    <div class="wrapper" id="animComp">
+                        <img src="./rock.svg" alt="" id="computer__choice">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="select_panel">
+            <div class="select_img">
+                <div class="overlay" style="display: none;"></div>
+                <img src="./rock.svg" alt="">
+                <p class="select_over">Камень</p>
+            </div>
+            <div class="select_img" >
+                <div class="overlay" style="display: none;"></div>
+                <img src="./scissors.svg" alt="">
+                <p class="select_over">Ножницы</p>
+            </div>
+            <div class="select_img">
+                <div class="overlay" style="display: none;"></div>
+                <img src="./paper.svg" alt="">
+                <p class="select_over">Бумага</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
