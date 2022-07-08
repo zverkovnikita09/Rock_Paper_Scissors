@@ -85,9 +85,9 @@ h1{
     overflow-y: scroll;
 }
 .rules p{
-    position: fixed;
-    top: 5%;
-    right: 33%;
+    position: absolute;
+    top: 1%;
+    right: 3%;
     font-size: 25px;
     cursor: pointer;
 }
