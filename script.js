@@ -88,7 +88,7 @@ rules.onclick = function(){
     buttons.style.display = 'none';
 }
 props_back.onclick = function(){
-    buttons.style.display = 'flex';
+    buttons.style.display = 'grid';
     properties.style.display = 'none';
 }
 
