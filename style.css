@@ -347,7 +347,7 @@ h1{
     text-shadow: 0 0 5px white;
 }
 .choice .wrapper.anim{
-    animation: anim 1.2s;
+    animation: anim 0.8s;
 }
 .result{
     opacity: 0;

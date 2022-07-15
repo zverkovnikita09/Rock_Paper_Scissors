@@ -192,7 +192,7 @@ for(let i = 0; i<select_img.length; i++){
                 }
                 setTimeout(Winner,1000)
             }
-        },1250)
+        },810)
         } 
     })
 }
