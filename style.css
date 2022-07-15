@@ -409,6 +409,9 @@ h1{
     .score__numbers{
         font-size: 75px;
     }
+    .select_panel{
+        margin: 15px 0 50px 0;
+    }
 }
 @media (max-width:840px){
     .play_area{
@@ -424,9 +427,6 @@ h1{
     }
     .computer{
         grid-area: 2/3/3/4;
-    }
-    .select_panel{
-        margin: 15px 0 50px 0;
     }
     .player>p, .computer>p{
         font-size: 22px;
@@ -521,5 +521,8 @@ h1{
     }
     .select_over{
         font-size: 15px;
+    }
+    .select_panel{
+        margin: 15px 0 75px 0;
     }
 }
