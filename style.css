@@ -465,8 +465,9 @@ h1{
 }
 @media (max-width: 520px) {
     .buttons{
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: repeat(2,1fr);
         gap: 30px;
     }
     .final_result h2{
@@ -516,5 +517,8 @@ h1{
     .play_area{
         grid-template-rows: 1fr 1fr;
         grid-row-gap: 15px;
+    }
+    .rules{
+        width: 90%;
     }
 }
