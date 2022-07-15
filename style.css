@@ -141,6 +141,7 @@ h1{
     color: white;
     font-size: 20px;
     background-color: rgba(58, 58, 58, 0.5);
+    -webkit-tap-highlight-color: transparent;
 }
 .name{
     margin-top: 10px;
@@ -293,9 +294,11 @@ h1{
     gap: 25px;
 }
 .select_panel{
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     gap: 30px;
+    -webkit-tap-highlight-color: transparent;
 }
 .select_img{
     border: 1px solid black;
@@ -311,6 +314,7 @@ h1{
     transform: scaleX(-1);
 }
 .select_over{
+    box-sizing: border-box;
     border-radius: 25px;
     position: absolute;
     top: 0;
@@ -459,6 +463,9 @@ h1{
 @media (max-width: 670px) {
     .rules{
         width: 70%;
+    }
+    .select_over{
+        font-size: 18px;
     }
 }
 @media (max-width: 520px) {
