@@ -519,4 +519,7 @@ h1{
     .rules{
         width: 90%;
     }
+    .select_over{
+        font-size: 15px;
+    }
 }
