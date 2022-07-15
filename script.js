@@ -27,6 +27,7 @@ const playerName = document.querySelector('#name');
 const nameOutput = document.querySelector('#nameOutput');
 const condition = document.querySelector('#win_conditn');
 const selectOver = document.querySelectorAll('.select_over');
+const props_back = document.querySelector('#props__back')
 
 let player_choice;
 let pCount = 0;
@@ -85,6 +86,10 @@ closeRules.onclick = function(){
 rules.onclick = function(){
     rulesText.style.display = 'block';
     buttons.style.display = 'none';
+}
+props_back.onclick = function(){
+    buttons.style.display = 'flex';
+    properties.style.display = 'none';
 }
 
 function Winner(){
